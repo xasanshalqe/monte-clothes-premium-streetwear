@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/KCT/OneDrive/index.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads | Premium Streetwear</title>
+    <link rel="stylesheet" href="./monte clothes _ Premium Streetwear_files/all.min.css">
+    <style>
+        :root {
+            --primary: #ff4757;
+            --bg-light: #ffffff;
+            --text-light: #333333;
+            --bg-dark: #1e272e;
+            --text-dark: #f5f6fa;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+        
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--bg-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition);
+        }
+        
+        .dark-mode header {
+            background-color: var(--bg-dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-icons i {
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .nav-icons i:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.3);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .dark-mode .product-card {
+            background-color: #2d3436;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        /* Location Banner */
+        .location-banner {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .location-banner i {
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            padding: 3rem 5%;
+            transition: var(--transition);
+        }
+        
+        .dark-mode footer {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: inherit;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dark-mode .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Dark mode toggle */
+        #darkModeToggle {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        /* Cart notification */
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
+        .cart-icon {
+            position: relative;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <header>
+        <nav>
+            <a href="file:///C:/Users/KCT/OneDrive/index.html#" class="logo">monte clothes</a>
+            
+            <div class="nav-links">
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#">New Arrivals</a>
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#">Men</a>
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#">Women</a>
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#">Accessories</a>
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#">Sale</a>
+            </div>
+            
+            <div class="nav-icons">
+                <button id="darkModeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fas fa-search"></i></a>
+                <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fas fa-user"></i></a>
+                <div class="cart-icon">
+                    <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fas fa-shopping-bag"></i></a>
+                    <span class="cart-count">3</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Summer Collection 2025</h1>
+            <p>Discover our premium selection of streetwear and urban fashion designed for the modern lifestyle.</p>
+            <a href="file:///C:/Users/KCT/OneDrive/index.html#" class="btn">Shop Now</a>
+        </div>
+    </section>
+    
+    <div class="location-banner">
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="locationText">Allow location access for shipping estimates</span>
+    </div>
+    
+    <section class="products">
+        <h2 class="section-title">Featured Products</h2>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./monte clothes _ Premium Streetwear_files/photo-1529374255404-311a2a4f1fd9" alt="Graphic T-Shirt" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">monte Graphic Tee</h3>
+                    <span class="product-price">$29.99</span>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./monte clothes _ Premium Streetwear_files/photo-1551232864-3f0890e580d9" alt="Denim Jacket" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Classic Denim Jacket</h3>
+                    <span class="product-price">$79.99</span>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./monte clothes _ Premium Streetwear_files/photo-1591047139829-d91aecb6caea" alt="Jogger Pants" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Premium Joggers</h3>
+                    <span class="product-price">$49.99</span>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./monte clothes _ Premium Streetwear_files/photo-1543076447-215ad9ba6923" alt="Baseball Cap" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Streetwear Cap</h3>
+                    <span class="product-price">$24.99</span>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">New Arrivals</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Men's Clothing</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Women's Clothing</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Accessories</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Sale</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Customer Service</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Track Order</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Returns &amp; Exchanges</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Shipping Info</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Our Story</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Sustainability</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Careers</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Terms of Service</a></li>
+                    <li><a href="file:///C:/Users/KCT/OneDrive/index.html#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+                <div class="social-links">
+                    <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fab fa-instagram"></i></a>
+                    <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fab fa-facebook"></i></a>
+                    <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fab fa-twitter"></i></a>
+                    <a href="file:///C:/Users/KCT/OneDrive/index.html#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 monte clotes. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const icon = darkModeToggle.querySelector('i');
+        
+        // Check for saved user preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        
+        // Location Detection
+        const locationText = document.getElementById('locationText');
+        
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            // In a real app, you would use a geocoding API to get the city name
+            // For this example, we'll just show the coordinates
+            locationText.textContent = `Your location: ${latitude.toFixed(2)}, ${longitude.toFixed(2)} - Free shipping for your area!`;
+        }
+        
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    locationText.textContent = "Allow location access for shipping estimates";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    locationText.textContent = "Location information unavailable";
+                    break;
+                case error.TIMEOUT:
+                    locationText.textContent = "Location request timed out";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    locationText.textContent = "An unknown error occurred";
+                    break;
+            }
+        }
+        
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            locationText.textContent = "Geolocation is not supported by this browser";
+        }
+        
+        // Cart functionality would go here
+        // This is just a simple counter for demonstration
+        let cartCount = 3;
+        const cartCountElement = document.querySelector('.cart-count');
+        
+        document.querySelectorAll('.product-card .btn').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                cartCountElement.textContent = cartCount;
+                
+                // Animation
+                cartCountElement.style.transform = 'scale(1.5)';
+                setTimeout(() => {
+                    cartCountElement.style.transform = 'scale(1)';
+                }, 300);
+            });
+        });
+    </script>
+
+</body></html>
